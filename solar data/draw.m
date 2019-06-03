@@ -1,0 +1,13 @@
+clc;
+clear;
+close all;
+data_2017_2018=importdata("./212-Site_25-Hanwha-Solar.csv");
+data_2019=importdata("./test(2019-now).csv");
+data_train=data_2017_2018.data;
+data_test=data_2019.data;
+data_train(isnan(data_train))=0;
+data_test=data_2019.data;
+data_test(isnan(data_test))=0;
+plot(data_train(:,1));
+xlabel("Days");
+ylabel("Power (kW)");

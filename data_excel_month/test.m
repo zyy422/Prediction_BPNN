@@ -1,0 +1,11 @@
+clc;
+clear;
+close all;
+x=1:12;
+y=1:12;
+[x,y]=meshgrid(x,y);
+z=3*y;
+z2=1+x.^4+y.^4;
+mesh(x,y,z);
+hold on;
+mesh(x,y,z2);
